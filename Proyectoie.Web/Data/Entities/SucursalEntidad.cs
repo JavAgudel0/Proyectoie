@@ -4,7 +4,7 @@ namespace Proyectoie.Web.Data.Entities
 {
     public class SucursalEntidad
     {
-
+        [Display(Name ="Codigo")]
         public int Id { get; set; }
 
 

@@ -16,7 +16,7 @@ namespace Proyectoie.Web.Data
 
         public DbSet<SucursalEntidad> Sucursales { get; set; }
         
-        public DbSet<EmpleadosEntidad> Empleados { get; set; }
+        
 
     }
 }

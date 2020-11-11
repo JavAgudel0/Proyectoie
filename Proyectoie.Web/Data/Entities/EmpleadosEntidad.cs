@@ -33,8 +33,8 @@ namespace Proyectoie.Web.Data.Entities
         public int ExtensionTelefono { get; set; }
 
 
-        [Display(Name = "Logo")]
-        public string LogoPath { get; set; }
+        [Display(Name = "Foto")]
+        public string FotoPath { get; set; }
 
 
         //Espacio para llave foranea de sucursal

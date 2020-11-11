@@ -9,8 +9,8 @@ using Proyectoie.Web.Data;
 namespace Proyectoie.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20201110164353_addsucursalentidad")]
-    partial class addsucursalentidad
+    [Migration("20201111193636_AddSucursales")]
+    partial class AddSucursales
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,6 +26,9 @@ namespace Proyectoie.Web.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Ciudad")
+                        .IsRequired();
+
                     b.Property<string>("Direccion")
                         .IsRequired();
 
@@ -36,7 +39,8 @@ namespace Proyectoie.Web.Migrations
                         .IsRequired()
                         .HasMaxLength(3);
 
-                    b.Property<int>("Telefono");
+                    b.Property<string>("Telefono")
+                        .IsRequired();
 
                     b.HasKey("Id");
 

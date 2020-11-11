@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Proyectoie.Web.Migrations
 {
-    public partial class addsucursalentidad : Migration
+    public partial class AddSucursales : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,7 +16,8 @@ namespace Proyectoie.Web.Migrations
                     Nombre = table.Column<string>(nullable: false),
                     Prefijo = table.Column<string>(maxLength: 3, nullable: false),
                     Direccion = table.Column<string>(nullable: false),
-                    Telefono = table.Column<int>(nullable: false)
+                    Ciudad = table.Column<string>(nullable: false),
+                    Telefono = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

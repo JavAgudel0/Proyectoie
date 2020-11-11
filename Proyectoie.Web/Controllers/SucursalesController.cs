@@ -124,26 +124,18 @@ namespace Proyectoie.Web.Controllers
                 return NotFound();
             }
 
-            var sucursalEntidad = await _context.Sucursales
+            SucursalEntidad sucursal = await _context.Sucursales
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (sucursalEntidad == null)
+            if (sucursal == null)
             {
                 return NotFound();
             }
 
-            return View(sucursalEntidad);
-        }
-
-        // POST: Sucursales/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var sucursalEntidad = await _context.Sucursales.FindAsync(id);
-            _context.Sucursales.Remove(sucursalEntidad);
+            _context.Sucursales.Remove(sucursal);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
 
         private bool SucursalEntidadExists(int id)
         {
