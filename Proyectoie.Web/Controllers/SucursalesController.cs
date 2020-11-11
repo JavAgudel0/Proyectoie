@@ -54,7 +54,7 @@ namespace Proyectoie.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Prefijo,Direccion,Telefono")] SucursalEntidad sucursalEntidad)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Prefijo,Direccion,Ciudad,Telefono")] SucursalEntidad sucursalEntidad)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Proyectoie.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Prefijo,Direccion,Telefono")] SucursalEntidad sucursalEntidad)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Prefijo,Direccion,Ciudad,Telefono")] SucursalEntidad sucursalEntidad)
         {
             if (id != sucursalEntidad.Id)
             {
